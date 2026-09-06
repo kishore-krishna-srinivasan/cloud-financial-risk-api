@@ -39,7 +39,11 @@ The project demonstrates the design and implementation of a **multi-cloud applic
                    │ Results &    │
                    │ Audit Data   │
                    └──────────────┘
+---
+
 ##Architecture Components
+
+```text
 
 | Component               | Purpose                                                                    |
 | ----------------------- | -------------------------------------------------------------------------- |
