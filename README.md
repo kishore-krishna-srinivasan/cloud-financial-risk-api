@@ -499,6 +499,6 @@ The project focused on combining application hosting, serverless computing, virt
 
 **AI Product Engineer | Software Engineering, Data & Applied AI**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Kishore%20Krishna%20Srinivasan-blue?style=flat&logo=linkedin)](YOUR_LINKEDIN_URL)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Kishore%20Krishna%20Srinivasan-blue?style=flat&logo=linkedin)](www.linkedin.com/in/kishore-krishna-srinivasan)
 
 ---
