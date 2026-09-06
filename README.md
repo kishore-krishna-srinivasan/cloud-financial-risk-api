@@ -39,3 +39,55 @@ The project demonstrates the design and implementation of a **multi-cloud applic
                    │ Results &    │
                    │ Audit Data   │
                    └──────────────┘
+
+| Component               | Purpose                                                                    |
+| ----------------------- | -------------------------------------------------------------------------- |
+| **Google App Engine**   | Hosts the Flask REST API                                                   |
+| **AWS Lambda**          | Provides serverless execution for analysis and cloud-management operations |
+| **Amazon EC2**          | Provides VM-based compute for analysis workloads                           |
+| **Amazon S3**           | Stores analysis results, audit information and generated charts            |
+| **AWS Systems Manager** | Supports remote execution and management of EC2 analysis workloads         |
+| **AWS Cost Explorer**   | Provides cloud-cost information for resource usage analysis                |
+
+Request Flow
+
+The application follows a cloud-based workflow for executing and retrieving financial analysis:
+
+Client
+  │
+  ▼
+Flask REST API
+  │
+  ├── Initialise compute resources
+  │
+  ├── AWS Lambda
+  │      │
+  │      └── Financial analysis
+  │
+  └── Amazon EC2
+         │
+         └── Financial analysis
+                 │
+                 ▼
+             Amazon S3
+                 │
+                 ├── Results
+                 ├── Audit information
+                 └── Generated charts
+                 │
+                 ▼
+             Flask API
+                 │
+                 ▼
+               Client
+
+Workflow
+The client sends an analysis or resource-management request to the Flask API.
+The application initialises either AWS Lambda or EC2 compute resources.
+Historical market data is retrieved and processed.
+Trading signals are generated from the market data.
+Monte Carlo simulations are executed using the selected compute service.
+Risk and profit/loss results are generated.
+Results and audit information are stored in Amazon S3.
+The API provides endpoints for retrieving analysis results, charts, execution information and audit data.
+Cloud resources can be monitored and terminated when they are no longer required.
